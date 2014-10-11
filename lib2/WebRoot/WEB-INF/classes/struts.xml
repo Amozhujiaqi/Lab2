@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+  <constant name ="struts.devMode" value="false"/>
+  <constant name ="struts.enable.DynamisMethodInvocation" value="true"/>
+  <include file="struts-default.xml"/>
+   <package name="Search" extends="struts-default" >
+    <action name="Search">
+      <result >/WEB-INF/Search.jsp</result>
+    </action>
+      <action name="Adbook" >
+      <result >/WEB-INF/Adbook.jsp</result>
+    </action>
+    <action name="Update" >
+      <result >/WEB-INF/Update.jsp</result>
+    </action>
+    <action name="addBookAction" class = "com.zjq.action.addBookAction">
+     <result name="success">/WEB-INF/success.jsp</result>
+     <result name="error">/WEB-INF/addauthor.jsp</result>
+    </action>
+    <action name="queryByName" class = "com.zjq.action.queryByName">
+    <result name="success">/WEB-INF/queryBookSuccess.jsp</result>
+    <result name="error">/WEB-INF/queryBookFalse.jsp</result>
+    </action>
+    <action name="showDatailsAction" class = "com.zjq.action.showDatailsAction">
+    <result>/WEB-INF/show.jsp</result>
+    </action>
+    <action name="deleteBookAction" class = "com.zjq.action.deleteBookAction">
+    <result name = "success">/WEB-INF/success.jsp</result>
+    <result name = "error">/WEB-INF/error.jsp</result>
+    </action>
+    <action name="updateTmpAction" class = "com.zjq.action.updateTmpAction">
+    <result>/WEB-INF/update.jsp</result>
+    </action>
+    <action name="updateBookAction" class = "com.zjq.action.updateBookAction">
+    <result name = "success">/WEB-INF/success.jsp</result>
+    <result name = "error">/WEB-INF/error.jsp</result>
+    </action>
+    <action name="addAuthorAction" class = "com.zjq.action.addAuthorAction">
+    <result name = "success">/WEB-INF/success.jsp</result>
+    <result name = "error">/WEB-INF/error.jsp</result>
+    </action>
+   </package>
+</struts>    
