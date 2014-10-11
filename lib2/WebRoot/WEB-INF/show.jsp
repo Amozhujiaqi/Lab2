@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+﻿<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -19,10 +19,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
           <th>PublishDate</th>
           <th>ISBN</th>
           <th>Price</th>
-          <th>AuthorId</th>
-          <th>Name</th>
           <th>Age</th>
           <th>Country</th>
+          <th>AuthorId</th>
+          <th>Name</th>
        </tr>
        <s:iterator value="book">
        <tr>
